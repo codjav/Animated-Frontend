@@ -1,0 +1,318 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: black;
+    color: #e7e7e7;
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+.image-g{
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.layer-blur{
+    box-sizing: border-box;
+    height: 0;
+    width: 30rem;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    box-shadow: 0px 0px 700px 15px white;
+    rotate: -30deg;
+    z-index: -1;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 999;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+    z-index: 999;
+}
+.logo{
+    z-index: 999;
+    font-size: 3rem;
+    transition: 0.4s ease;
+}
+.logo:hover{
+    text-shadow:0px 0px 20px whitesmoke;
+}
+ header h1{
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 300;
+ }
+ nav{
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-left: -5%;
+ }
+ nav a{
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    transition: color 0.2s ease;
+    color: inherit;
+ }
+nav a:hover{
+    color: #a7a7a7;
+}
+.sign{
+    z-index: 9999;
+    background-color: #a7a7a7;
+    color: black;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+.sign:hover{
+    background-color: white;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(90vh - 6rem);
+}
+.content{
+    max-width: 40rem;
+    margin-left: 10%;
+    z-index: 999;
+}
+.tagbox{
+    position: relative;
+    width: 18rem;
+    height: 2.5rem;
+    border-radius: 50px;
+    background: linear-gradient(to right, #656565, #7f42a7, #6600c5, #5300a0, #757575,#656565);
+    background-size: 200%;
+    animation: animationGradient 2.5s linear infinite;
+    box-shadow: 0 0 15px rgb(203, 194, 194);
+}
+@keyframes animationGradient {
+    to{
+        background-position: 200%;
+    }
+}
+.tag{
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.tag:hover{
+    color: #5300a0;
+}
+.content h1{
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin: 2rem 0;
+    line-height: 1.2;
+    text-shadow: 0 0 10px rgba(128, 128, 128, 0.418);
+}
+.desc{
+    font-size: 1.3rem;
+    letter-spacing: 0.05em;
+    max-width: 25rem;
+    color: gray;
+}
+.buttons{
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+.btn2{
+    text-decoration: none;
+    border: 2px solid #2a2a2a;
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    transition: background-color 0.2s ease;
+}
+.btn2:hover{
+    background-color: #1a1a1a;
+}
+.btn1{
+    text-decoration: none;
+    /* border: 2px solid #2a2a2a; */
+    color: black;
+    padding: 0.7rem 1.2rem;
+    background-color: white;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    transition: background-color 0.2s ease;
+}
+.btn1:hover{
+    background-color: gray;
+}
+.robot-3d{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: -25%;
+}
+
+.hidef{
+    position: fixed;
+    bottom: 0%;
+    display: flex;
+    align-items: center;
+    width: calc(100vw - 16rem);
+    margin: 2rem 8rem;
+    height: 2.5rem;
+    border-radius: 50px;
+    background: linear-gradient(to right, #656565, #7f42a7, #6600c5, #5300a0, #757575,#656565);
+    background-size: 200%;
+    animation: animationrad 2.5s linear infinite;
+    box-shadow: 0 0 15px rgb(203, 194, 194);
+}
+@keyframes animationrad {
+    to{
+        background-position: 200%;
+    }
+}
+
+.hide{
+    width: 102%;
+    position: fixed;
+    bottom: 0%;
+    margin: -0.8rem 0;
+    height: 2.5rem;
+    border-radius: 50px;
+    padding: 2rem 1rem;
+    display: flex;
+    font-size: 1rem;
+    align-items: center;
+    background-color: black;
+    border: 1px solid transparent;
+    animation: aniscale 6s ease-in-out alternate infinite, fadeLoop 14s steps(4) infinite;
+}
+@keyframes aniscale {
+    to{
+    transform: translateX(85%);
+    }
+}
+
+@keyframes fadeLoop {
+  0%   { opacity: 0; }
+  30%  { opacity: 1; }
+  70%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.animate-footer-up {
+  animation: fadeUp 2s ease-out forwards;
+}
+@keyframes fadeUp {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1300px) {
+    header{
+        padding: 1rem 0.5rem;
+    }
+    .logo{
+        font-size: 2rem;
+    }
+    .content{
+        margin-top: 85%;
+    }
+    .robot-3d{
+        transform: scale(0.8);
+        top: -20%;
+        right: 2%;
+    }
+}
+
+@media (max-width: 768px) {
+    header{
+        padding: 1rem 0.1rem;
+    }
+    nav{
+        display: none;
+    }
+    header h1{
+        font-size: 2rem;
+    }
+    .sign{
+        padding: 0.6rem 1.5rem;
+    }
+    .content{
+        margin-top: 25rem;
+    }
+    .robot-3d{
+        transform: scale(0.5);
+        top: -25%;
+        right: 0;
+    }
+    .content{
+        max-width: 30rem;
+        margin-left: 10%;
+    }
+    .tagbox{
+        width: 12rem;
+    }
+    .content h1{
+        font-size: 2.5rem;
+    }
+    .desc{
+        font-size: 1rem;
+    }
+    .btn1{
+        font-size: 0.8em;
+        padding: 0.5rem 2rem;
+    }
+    .btn2{
+        font-size: 0.8em;
+        padding: 0.5rem 1.2rem;
+    }
+    .hidef{
+        margin-left: 10%;
+        width: calc(100vw - 4rem);
+    }
+  .hide {
+    font-size: 0.8rem;
+    animation: none !important;
+  }
+}
